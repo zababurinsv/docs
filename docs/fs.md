@@ -5,6 +5,7 @@
 * FS.createDataFile("/data"​ ,"file.txt","abcdef", true,true);
 * FS.rename(​"/data/file.txt"​,"/data/renamed.txt"​);
 * FS.unlink("/data/file.txt");
+* FS.readdir("/data")
 
 ## function
 

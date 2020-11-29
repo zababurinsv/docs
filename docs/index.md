@@ -1,13 +1,11 @@
-# markdown
+# Сайт
+## Размеры экранов
 
-* FS.readFile("/data/file.txt",{ encoding: "utf8" });
-* FS.writeFile(​ "file.txt"​ , ​ "some contents"​ );
-* FS.createDataFile("/data"​ ,"file.txt","abcdef", true,true);
-* FS.rename(​"/data/file.txt"​,"/data/renamed.txt"​);
-* FS.unlink("/data/file.txt");
-* FS.readdir("/data")
-
-## function
-
-* const fsSave = () => this.FS.syncfs(false, err => console.warn(err));
-* const fsLoad = () => this.FS.syncfs(true , err => console.warn(err));
+  1. Десктоп  
+   * 1200*2607 px  
+  2. Планшет
+   * 768*1024 px
+  3. Мобильное приложение
+   * 320*568 px
+## Картинки для доски
+Картинки 2000*2588 px [1.294]

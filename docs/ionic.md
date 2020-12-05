@@ -1,3 +1,6 @@
+# change toogle
+
+```
 <!DOCTYPE html>
 
 <html lang="en">
@@ -520,20 +523,16 @@
 
         dataDisplay = dataStyle.getPropertyValue('display');
 
-        console.log('display views', {
-          "#":"display views"
-          "skeletonDisplay":skeletonDisplay
-          "dataDisplay":dataDisplay
-        })
       document.getElementById('skeleton').style.display = skeletonDisplay === 'none' ? 'block' : 'none';
 
       document.getElementById('data').style.display = dataDisplay === 'none' ? 'block' : 'none';
 
     }
-
+    toggleSkeleton()
   </script>
 
 </body>
 
 </html>
+```
 

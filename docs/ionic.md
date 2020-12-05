@@ -27,7 +27,7 @@ script toggleSkeleton()
 
     :root {
 
-      --ion-safe-area-top: 20px;
+      --ion-safe-area-top: 0;
 
       --ion-safe-area-bottom: 22px;
 

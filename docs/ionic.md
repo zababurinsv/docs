@@ -1,4 +1,9 @@
-# change toogle
+# Изменения
+
+Добавил вызов функции  toggleSkeleton()
+Изменил поведение кнопки(а может быть даже нет)  toggleSkeleton()
+  * document.getElementById('skeleton').style.display = skeletonDisplay === 'none' ? 'block' : 'none';
+  * document.getElementById('data').style.display = dataDisplay === 'none' ? 'block' : 'none';
 ----
 
 ```

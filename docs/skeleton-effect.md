@@ -8,9 +8,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skeleton Text</title>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <script type="module" src="https://zababurinsv.github.io/distrib/ionic.esm.js"></script>
+  <script nomodule src="https://zababurinsv.github.io/distrib/ionic.js"></script>
+  <link rel="stylesheet" href="https://zababurinsv.github.io/distrib/ionic.bundle.css"/>
   <style>
     #data {
   display: none;

@@ -20,9 +20,7 @@ script toggleSkeleton()
   <title>Skeleton Text</title>
 
   <script type="module" src="https://zababurinsv.github.io/distrib/ionic.esm.js"></script>
-
   <script nomodule src="https://zababurinsv.github.io/distrib/ionic.js"></script>
-
   <link rel="stylesheet" href="https://zababurinsv.github.io/distrib/ionic.bundle.css"/>
 
   <style>

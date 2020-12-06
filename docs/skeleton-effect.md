@@ -1,4 +1,4 @@
-# Skeleton Effect
+#skeleton-effect
 
 ```
 <!DOCTYPE html>

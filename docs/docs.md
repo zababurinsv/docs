@@ -5,6 +5,8 @@
 * [названия цветов][variables]
 * [шрифт для org][generatory]
 * [конвертация картинки][AscArt]
+* [символьные шрифты][kak-pisat-simvolami]
+  
 ## Java
 * [web container][jasonelle]
 
@@ -18,3 +20,4 @@
 [jasonelle]:https://habr.com/ru/company/ruvds/blog/352200/
 [generatory]:https://fsymbols.com/ru/emoji/
 [AscArt]:http://foxtools.ru/AscArt
+[kak-pisat-simvolami]:http://vkontakte.doguran.ru/kak-pisat-simvolami.php

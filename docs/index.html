@@ -49,4 +49,20 @@
 <script type="module" src="/static/html/components/lib-markdown/lib-markdown.mjs" async></script>
 <script type="module" src="/static/html/components/page-external/page-external.mjs" async></script>
 <style> @import url("/css/variables.css");</style>
+<script type="module">
+    let element = document.createElement('script')
+    element.src = '/static/html/components/component_modules/eruda/eruda.js'
+    document.head.append(element);
+    element.onload = () => {
+      let element = document.createElement('script')
+      element.src = '/static/html/components/component_modules/eruda/eruda-dom.js'
+      document.head.append(element);
+      element.onload = () => {
+        eruda.init({
+          tool: ['console', 'elements']
+        });
+        eruda.add(erudaDom);
+      }
+    };
+</script>
 </html>

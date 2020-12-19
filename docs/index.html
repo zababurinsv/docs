@@ -49,6 +49,7 @@
 <script type="module" src="/static/html/components/lib-markdown/lib-markdown.mjs" async></script>
 <script type="module" src="/static/html/components/page-external/page-external.mjs" async></script>
 <script type="module">
+  if(location.hostname !== 'localhost'){
     let element = document.createElement('script')
     element.src = '/static/html/components/component_modules/eruda/eruda.js'
     document.head.append(element);
@@ -63,6 +64,7 @@
         eruda.add(erudaDom);
       }
     };
+  }
 </script>
 <style> @import url("/css/variables.css");</style>
 </html>

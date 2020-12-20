@@ -7,6 +7,8 @@
 * [конвертация картинки][AscArt]
 * [символьные шрифты][kak-pisat-simvolami]
 * [star][star]  
+* [server][server star]
+
 ## Java
 * [web container][jasonelle]
 
@@ -22,3 +24,4 @@
 [AscArt]:http://foxtools.ru/AscArt
 [kak-pisat-simvolami]:http://vkontakte.doguran.ru/kak-pisat-simvolami.php
 [star]:https://raw.githubusercontent.com/libp2p/js-libp2p-webrtc-star/master/README.md
+[server star]:https://github.com/libp2p/js-libp2p-webrtc-star

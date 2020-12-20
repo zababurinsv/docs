@@ -6,7 +6,7 @@
 * [шрифт для org][generatory]
 * [конвертация картинки][AscArt]
 * [символьные шрифты][kak-pisat-simvolami]
-  
+* [star][star]  
 ## Java
 * [web container][jasonelle]
 
@@ -21,3 +21,4 @@
 [generatory]:https://fsymbols.com/ru/emoji/
 [AscArt]:http://foxtools.ru/AscArt
 [kak-pisat-simvolami]:http://vkontakte.doguran.ru/kak-pisat-simvolami.php
+[star]:https://raw.githubusercontent.com/libp2p/js-libp2p-webrtc-star/master/README.md

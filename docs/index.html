@@ -32,39 +32,44 @@
 <script type="module">
   import UA from '/static/html/components/component_modules/bundle/ua/ua.index.mjs'
   import tests from  '/static/html/components/component_modules/tests/tests.mjs'
-  let userAgent = new UA['default']()
+  import client from '/static/html/components/component_modules/client_reverse/client_reverse.mjs'
 
   function test(){
     let setup =  mocha.setup('bdd')
-    console.log('setup', setup)
+    console.log('mocha', setup)
     tests()
+    return true
   }
-  function init(){
-    let element = document.createElement('script')
-    element.src = '/static/html/components/component_modules/eruda/eruda.js'
-    document.head.append(element);
-    element.onload = () => {
-      let element = document.createElement('script')
-      element.src = '/static/html/components/component_modules/eruda/eruda-dom.js'
-      document.head.append(element);
-      element.onload = () => {
-        eruda.init({
-          tool: ['console', 'elements']
-        });
-        eruda.add(erudaDom);
+  function init(status){
+    return new Promise((resolve,reject)=>{
+      if(status) {
+        let element = document.createElement('script')
+        element.src = '/static/html/components/component_modules/eruda/eruda.js'
+        document.head.append(element);
+        element.onload = () => {
+          let element = document.createElement('script')
+          element.src = '/static/html/components/component_modules/eruda/eruda-dom.js'
+          document.head.append(element);
+          element.onload = () => {
+            eruda.init({
+              tool: ['console', 'elements']
+            });
+            eruda.add(erudaDom);
+            resolve(true)
+          }
+        };
       }
-    };
+    })
   }
-  console.log('user-agent', JSON.stringify(userAgent.data, null, 2));
-  if(userAgent.data.deviceCategory === 'desktop'){
-    if(location.hostname !== 'localhost'){
-      init()
+
+  let userAgent = new UA['default']['user-agent']
+  let type = userAgent.getResult().device.type
+  console.log('user-agent', JSON.stringify(userAgent.getResult(), null, 2));
+  if(type === 'tablet' || type === 'mobile') {
+    init(true).then(()=>{
       test()
-    } else {
-      test()
-    }
+    })
   } else {
-    init()
     test()
   }
 </script>

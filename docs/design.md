@@ -57,14 +57,14 @@
         <varan-header preset="index"></varan-header>
 <!--        <waves-modal></waves-modal>-->
         <image-index>
-<!--            <web3-authorization-google>-->
+<!--            <web3-google>-->
 <!--                <varan-editor type="swap">-->
 <!--                    <varan-modal-button  type="swap"  mode="view"></varan-modal-button>-->
 <!--                    <varan-menu type="light-editor"  slot="edit"></varan-menu>-->
 <!--                </varan-editor>-->
 <!--                <codemirror-main></codemirror-main>-->
 <!--                <directory-list></directory-list>-->
-<!--            </web3-authorization-google>-->
+<!--            </web3-google>-->
         </image-index>
     </div>
 <!--    <div id="info">-->

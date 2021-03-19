@@ -15,6 +15,34 @@
     import events from '/static/html/components/component_modules/CustomEvent/index.mjs'
     import iframe from '/static/html/components/component_modules/iframe/iframe.mjs'
     import isEmpty from '/static/html/components/component_modules/isEmpty/isEmpty.mjs'
+    let python  = await import('/static/html/components/component_modules/pyodide/pyodide.mjs')
+    let python_code_default =`
+                  import sys
+                  import numpy as np
+                  import pandas as pd
+                  import js
+                  import scipy.stats as stats
+                  import matplotlib.pyplot as plt
+                  import io, base64
+                  `
+
+    python.languagePluginLoader.then(async () => {
+      let res =  await pyodide.runPythonAsync(`
+                  import sys
+                  from js import document
+                  import matplotlib.pyplot as plt
+                  import pandas as pd
+                  import numpy as np
+                  import io, base64
+                  x = np.array([1, 2, 3])
+                  x
+      `);
+
+      let y =  pyodide.runPython(`y=np.ones([3, 3])
+                        y`);
+      console.log('----------->>>',res,  y);
+
+    });
     let verifyOpener = false
 
     try{ isEmpty(window.opener) }catch (e) { verifyOpener = true }

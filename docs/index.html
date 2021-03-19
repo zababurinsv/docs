@@ -33,15 +33,35 @@
 <script type="module">
   import UA from '/static/html/components/component_modules/bundle/ua/ua.index.mjs'
   import tests from  '/static/html/components/component_modules/tests/tests.mjs'
-  import client from '/static/html/components/component_modules/client_reverse/client_reverse.mjs'
-
-  function test(){
-    let setup =  mocha.setup('bdd')
-    console.log('mocha', setup)
-    tests()
+  let userAgent = new UA['default']['user-agent']
+  let sys = {
+    "type": userAgent.getResult().device.type,
+    "init":{
+      "test": false,
+      "ua": false,
+      "eruda": false,
+    },
+    "user-agent": JSON.stringify(userAgent.getResult(), null, 2)
+  }
+  if(sys.type === 'tablet' || sys.type === 'mobile') {
+    init(sys.init.eruda)
+      .then(()=>{
+      test(sys.init.test)
+    }).catch((e)=>{
+      console.warn(e)
+    })
+  } else {
+    test(sys.init.test)
+  }
+  function test(state) {
+    if(state) {
+      let setup =  mocha.setup('bdd')
+      // console.log('mocha', setup)
+      tests()
+    }
     return true
   }
-  function init(status){
+  function init(status) {
     return new Promise((resolve,reject)=>{
       if(status) {
         let element = document.createElement('script')
@@ -61,17 +81,6 @@
         };
       }
     })
-  }
-
-  let userAgent = new UA['default']['user-agent']
-  let type = userAgent.getResult().device.type
-  console.log('user-agent', JSON.stringify(userAgent.getResult(), null, 2));
-  if(type === 'tablet' || type === 'mobile') {
-    init(true).then(()=>{
-      test()
-    })
-  } else {
-    test()
   }
 </script>
 <style> @import url("/css/index.css");</style>
